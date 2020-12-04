@@ -1,0 +1,25 @@
+<html>
+	<body>
+		<h1>Ejercicio 1</h1>
+		<label>Ingrese su DNI</label>
+		<input type="number" id="inp"><br><br>
+		<button id="iniciar" onclick="calc()">Calcular!</button><br><br>
+		<label id="res">Resultado</label>
+		<script type="text/javascript">
+
+			function calc(){
+				var x = document.getElementById("inp").value;
+				var letra = ["T", "R", "W", "A", "G", "M", "Y", "F", "P", "D", "X", "B", "N", "J", "Z", "S", "Q", "V", "H", "L", "C", "K", "E"];
+				//console.log(x);
+
+				if (x >= 0 && x <= 99999999) 
+				{
+					var div = x % 23;
+				}
+
+				document.getElementById("res").innerHTML = "Resultado " + letra[div];
+			}
+			
+		</script>
+	</body>
+</html>

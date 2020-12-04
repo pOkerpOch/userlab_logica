@@ -1,0 +1,26 @@
+<html>
+	<body>
+		<h1>Ejercicio 2</h1>
+		<label>Ingrese el valor minimo</label>
+		<input type="number" id="min"><br><br>
+		<label>Ingrese el valor maximo</label>
+		<input type="number" id="max"><br><br>
+		<button id="iniciar" onclick="aleatorio()">Calcular!</button><br><br>
+		<label id="res">Resultado</label>
+
+		<script type="text/javascript">
+			
+			function aleatorio(){
+				var x = document.getElementById("min").value;
+				var y = document.getElementById("max").value;
+				//console.log(x);
+				//console.log(y);
+  				var ran = Math.floor(Math.random() * (y - x + 1) + x);
+  				//console.log(ran);
+  				document.getElementById("res").innerHTML = "El numero aleatorio es: " + ran;
+			}
+
+		</script>
+
+	</body>
+</html>
